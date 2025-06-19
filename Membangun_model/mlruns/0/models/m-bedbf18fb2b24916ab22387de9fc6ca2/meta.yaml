@@ -1,0 +1,10 @@
+artifact_location: file:///D:/OneDrive/21.Dicoding_course/membangun%20sistem%20machine%20learning/submission/Membangun_model/mlruns/0/models/m-bedbf18fb2b24916ab22387de9fc6ca2/artifacts
+creation_timestamp: 1750345811266
+experiment_id: '0'
+last_updated_timestamp: 1750345817829
+model_id: m-bedbf18fb2b24916ab22387de9fc6ca2
+model_type: null
+name: model
+source_run_id: 9cf887470e5745a1813d40950b819c9e
+status: 2
+status_message: null
