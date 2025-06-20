@@ -3,6 +3,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 import mlflow
+import joblib
 
 # Tracking otomatis
 mlflow.sklearn.autolog()
@@ -25,3 +26,6 @@ with mlflow.start_run():
     mse = mean_squared_error(y_test, y_pred)
 
     print(f"Mean Squared Error: {mse:.4f}")
+    joblib.dump(model, "model.joblib")
+    print(model.feature_importances_)
+    mlflow.log_artifact("model.joblib")

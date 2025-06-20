@@ -1,0 +1,20 @@
+groups:
+  - name: model_alerts
+    rules:
+      - alert: LowModelAccuracy
+        expr: model_accuracy < 0.80 # Menyaring metrik akurasi di bawah 80%
+        for: 5m # Alert akan aktif setelah 5 menit kondisi terjadi
+        labels:
+          severity: warning
+        annotations:
+          summary: "Akurasi model rendah"
+          description: "Akurasi model di bawah 80% selama lebih dari 5 menit."
+
+      - alert: HighModelLatency
+        expr: model_latency > 2 # Menyaring metrik latency lebih dari 2 detik
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Latency model tinggi"
+          description: "Latency model lebih dari 2 detik selama lebih dari 5 menit."
